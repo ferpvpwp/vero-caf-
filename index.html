@@ -1,89 +1,304 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-   <title>veroo cafés</title>
-   <link rel="stylesheet" href="style.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <header>
-    <img src="./assets/logo.svg" alt="logo">
-    <ul>
-        <a href="" target="_blank">
-        <li>
-            inicio
-        </li>
-        </a>
-        <a href="" target="_blank">
-            <li>
-               loja
-            </li>
-            </a>
+/* Body com gradiente escuro */
+body {
+    background: linear-gradient(61.49deg, #32160F 0%, #512C25 50.43%, #000000 98.79%);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
 
-       
-         <a href="" target="_blank">
-             <li>
-                 produtores
-             </li>
-                    </a>
+/* Container centralizado */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
 
-         <a href="" target="_blank">
-             <li>
-                 blog
-             </li>
-             </a>
-    </ul>
-</header>
-    <div class="container">
+/* Links */
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
-<main>
-    <img src="./assets/caffe.png" alt="grao">
+/* Botões */
+button {
+    border: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
 
-<div>
-<h4> CAFÉS ESPECIAIS TODO MÊS</h4>
-<h1>Café não é </h1>
-<h1>aó uma bebida</h1>
- 
-<p>Ao entrar para o Clube Veroo, todo mês você receberá uma box com o café inédito do mês, recém torrado e produzido por pequenos produtores de todo o país. </p>
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 150px;
+    border-bottom: 1px solid #8c6553;
+    align-items: center;
+}
 
-<button>
+/* Menu */
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    height: 30px;
+}
 
- <a href="">
-ASSINE E RECEBA
-    </a>
-</button>
+li {
+    color: white;
+    font-size: 15px; /* Corrigido */
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-bottom 0.3s ease;
+}
 
+li:hover {
+    border-bottom: 2px solid #8c6553;
+}
 
-</div>
+/* Main */
+main {
+    display: flex;
+    align-items: center;
+    padding: 40px 150px;
+    gap: 50px;
+    flex-wrap: wrap; /* Para responsividade */
+}
 
+main div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    flex: 1 1 300px; /* Cresce e encolhe para responsividade */
+}
 
-</main>
-    </div>
+/* Textos */
+h4 {
+    color: #d8a661;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
 
-<footer>
-   <button>
-<a href=target="_blank">
-   cupom: <span>ferp</span>
-</a>
+h1 {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 36px; /* Aumentado para destaque */
+    font-weight: 700;
+    line-height: 1.2;
+}
 
-   </button>
-   <P>
-    Além disso, você também receberá mensalmente um mimo surpresa para deixar a sua experiência ainda mais gostosa. 
-   </P>
+p {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 388px;
+    line-height: 1.5;
+}
 
-   <DIV>
-  <img src="./assets/preto.png" alt="preto">
-  <img src="./assets/vermelh.png" alt="preto">
-  <img src="./assets/azul.png" alt="preto">
-  
-   </DIV>
-</footer>
+/* Botão principal */
+main div button {
+    border-radius: 31px;
+    background: #D3A661;
+    box-shadow: 0px 2.48px 2.48px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    flex-shrink: 0;
+    transition: filter 0.3s ease;
+}
 
+main div button:hover {
+    filter: drop-shadow(0 0 8px #d8a661);
+}
 
-</body>  
-</html>
+main div button a {
+    color: #000;
+    font-size: 11.16px;
+    font-weight: 700;
+    padding: 8px 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    display: flex;
+    border-radius: 50px 50px 0 0;
+    background: #4E2A23;
+    box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.30);
+    height: 250px;
+    align-items: center;
+    position: relative;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 317px;
+    margin-left: 0;
+}
+
+footer button {
+    border-radius: 50px;
+    background: #2c120d;
+    width: 154px;
+    height: 49px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+footer button:hover {
+    background: #4e2a23;
+}
+
+footer button a {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    display: inline-block;
+}
+
+footer button a span {
+    font-weight: 700;
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+/* =================== */
+/* RESPONSIVIDADE */
+/* =================== */
+
+/* Telas médias - tablets */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    main {
+        padding: 20px 40px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main div {
+        max-width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    footer div {
+        position: static;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer button {
+        position: static;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Telas pequenas - celulares */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    main div button {
+        width: 100%;
+        height: 45px;
+    }
+
+    footer {
+        padding: 20px 15px;
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    footer p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    footer button {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    footer div {
+        position: static;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
